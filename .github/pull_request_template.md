@@ -37,3 +37,5 @@
 <!--    and then add a "(re)run tests" comment if you want an auto-build.   -->
 
 <!-- And commenting with "rerun tests" or "run tests" will force the PR check -->
+
+> Actively maintained by the @Monotype/driverpdldev team.
