@@ -5,7 +5,6 @@
   - [PR Naming](#pr-naming)
   - [PR Labels](#pr-labels)
   - [PR Descriptions](#pr-descriptions)
-  - [Merging](#merging)
 - [Branching](#branching)
   - [Development branches](#development-branches)
   - [dev](#dev)
@@ -15,6 +14,7 @@
 - [Documentation](#documentation)
   - [JavaScript](#javascript)
 - [Unit Test Coverage](#unit-test-coverage)
+- [Merging](#merging)
 
 This repository contains Web Components for JavaScript which support the L1, L2,
 and L3 experiences for C2PA.
@@ -22,8 +22,7 @@ and L3 experiences for C2PA.
 Following are general guidelines for contributing source to this repo.
 
 All communications regarding this repository are governed by the
-[Monotype Contributor Covenant Code of Conduct](https://github.com/Monotype/.github/blob/main/CODE_OF_CONDUCT.md)
-(MCCCoC).
+[Monotype Contributor Covenant Code of Conduct](https://github.com/Monotype/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ## Issues
 
@@ -73,16 +72,6 @@ The PR templates includes a number of sections:
   - This section should give step-by-step instructions for verifying that the
     code changes are working
 
-### Merging
-
-Once the PR has been reviewed, approved & passes all automated checks, it can be merged; but the merge operation to use depends on the source and target branches of the pull request:
-
-Source Branch|Target Branch|Merge Operation|Notes
--|-|-|-
-_any_|`main`|Merge|Preserves development history of release in the `main` branch
-hotfix branches: `hotfix/*` |_any_|Merge|Permits the same Hotfix to merge to multiple target branches
-development branches: `fix/*`, `feature/*`, `td/*`, `spike/*`|`dev`|Squash and merge|Before confirming, verify that the commit title is the same as the PR title, and the commit description is useful.
-
 ## Branching
 
 Branches in this repository follow the [gitflow branching workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
@@ -105,16 +94,11 @@ The `dev` branch is the base branch from which all new feature branches are crea
 It is the default branch for feature and fix PRs to merge into, and always contains
 the most up-to-date code.
 
-To maintain a clean commit history, features and fixes are usually squash-merged,
-but not hot-fixes; see [Merging](#merging) for the complete details.
+Feature and fix branches should have the cleanest possible commit history.
 
 ### main
 
-The `main` branch contains stable, fully-tested code. It should only be merged
-into via CI/CD flows, and only from the `dev` branch or a hot-fix branch.
-
-Merges into `main` **must always** be plain-merged, **never** squashed; see
-[Merging](#merging) for a thorough-going explanation of this rationale.
+The `main` branch contains stable, fully-tested code.
 
 ## Style
 
@@ -158,3 +142,14 @@ as the `/src` directory it tests.
 
 Tests can be run by hand using the `npm test` command, which will automatically
 dump out coverage amounts.
+
+## Merging
+
+Once the PR has been reviewed, approved & passes all automated checks, it will
+be merged by the maintainers according to the following rubric:
+
+Source Branch|Target Branch|Merge Operation|Notes
+-|-|-|-
+_any_|`main`|Merge|Preserves development history of release in the `main` branch
+hotfix branches: `hotfix/*` |_any_|Merge|Permits the same Hotfix to merge to multiple target branches
+development branches: `fix/*`, `feature/*`, `td/*`, `spike/*`|`dev`|Squash and merge|Before confirming, verify that the commit title is the same as the PR title, and the commit description is useful.

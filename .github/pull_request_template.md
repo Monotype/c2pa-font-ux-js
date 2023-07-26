@@ -23,19 +23,4 @@
 # Verification Instructions
 <!-- Instructions for checking or testing this change. -->
 
-<!-- NOTES on automated checks:                                             -->
-<!--                                                                        -->
-<!--  * The PR build is only kicked off when the `bug` and/or `enhancement` -->
-<!--    label is applied to the PR.                                         -->
-<!--                                                                        -->
-<!--  * Adding a comment with the phrase "run tests" or "rerun tests"       -->
-<!--    will cause the PR check to run again.                               -->
-<!--                                                                        -->
-<!--  * Remove the substring "NO_" from the magic phrase "skip_NO_build"    -->
-<!--    in order to skip the build, even when the label(s) mentioned above  -->
-<!--    are attached. If you use this phrase, you will need to remove it    -->
-<!--    and then add a "(re)run tests" comment if you want an auto-build.   -->
-
-<!-- And commenting with "rerun tests" or "run tests" will force the PR check -->
-
 > Actively maintained by the @Monotype/driverpdldev team.
